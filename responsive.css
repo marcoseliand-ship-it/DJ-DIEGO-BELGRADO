@@ -1,0 +1,688 @@
+/* ======================================================
+   RESPONSIVE.CSS
+   Media Queries - DJ Diego Belgrado
+   ====================================================== */
+
+/* ===================================
+   TABLET (até 1024px)
+   =================================== */
+@media (max-width:1024px){
+
+    /* HEADER */
+    header .container{
+        padding:14px 0;
+    }
+
+    .logo-img{
+        width:140px;
+    }
+
+    nav ul{
+        gap:25px;
+    }
+
+    /* BANNER */
+    .banner-content h1{
+        font-size:52px;
+        line-height:60px;
+    }
+
+    .banner-content h2{
+        font-size:22px;
+    }
+
+    .banner-grid{
+        gap:40px;
+    }
+
+    /* SOBRE */
+    .sobre-grid{
+        gap:40px;
+    }
+
+    .sobre-texto h2{
+        font-size:32px;
+    }
+
+    /* SERVIÇOS */
+    .servicos-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:25px;
+    }
+
+    /* GALERIA */
+    .galeria-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:20px;
+    }
+
+    /* VÍDEOS */
+    .videos-grid{
+        gap:25px;
+    }
+
+    .video iframe{
+        height:280px;
+    }
+
+    /* AGENDA */
+    .evento{
+        gap:20px;
+        padding:20px;
+    }
+
+    .data{
+        min-width:75px;
+        height:75px;
+    }
+
+    .data h3{
+        font-size:28px;
+    }
+
+    .descricao h4{
+        font-size:20px;
+    }
+
+    /* DEPOIMENTOS */
+    .cards-depoimentos{
+        grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+        gap:25px;
+    }
+
+    .depoimento{
+        padding:30px 25px;
+    }
+
+    /* CONTATO */
+    .contato-grid{
+        gap:40px;
+    }
+
+    .info-contato h3{
+        font-size:26px;
+    }
+
+    /* FOOTER */
+    footer .container{
+        gap:40px;
+    }
+
+    .footer-logo h2{
+        font-size:28px;
+    }
+
+}
+
+/* ===================================
+   TABLET PEQUENO / LANDSCAPE (até 900px)
+   =================================== */
+@media (max-width:900px){
+
+    /* BANNER */
+    .banner-grid{
+        grid-template-columns:1fr;
+        text-align:center;
+        gap:30px;
+    }
+
+    .banner-content h1{
+        font-size:44px;
+        line-height:52px;
+    }
+
+    .banner-image{
+        display:none;
+    }
+
+    .botoes{
+        justify-content:center;
+    }
+
+    /* SOBRE */
+    .sobre-grid{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .sobre-imagem{
+        max-width:400px;
+        margin:0 auto;
+    }
+
+    /* CONTATO */
+    .contato-grid{
+        grid-template-columns:1fr;
+    }
+
+    /* FOOTER */
+    footer .container{
+        grid-template-columns:1fr 1fr;
+        gap:30px;
+    }
+
+    .footer-logo{
+        grid-column:1 / -1;
+        text-align:center;
+    }
+
+}
+
+/* ===================================
+   MOBILE GRANDE (até 768px)
+   =================================== */
+@media (max-width:768px){
+
+    /* HEADER */
+    header .container{
+        padding:12px 0;
+    }
+
+    .logo-img{
+        width:120px;
+    }
+
+    nav ul{
+        display:none;
+        flex-direction:column;
+        position:absolute;
+        top:100%;
+        left:0;
+        width:100%;
+        background:rgba(5,5,5,.98);
+        backdrop-filter:blur(10px);
+        padding:20px 0;
+        gap:0;
+        border-bottom:1px solid rgba(255,255,.08);
+    }
+
+    nav ul.active{
+        display:flex;
+    }
+
+    nav ul li{
+        text-align:center;
+        padding:14px 0;
+    }
+
+    nav ul li a{
+        font-size:18px;
+    }
+
+    .menu-mobile{
+        display:block;
+    }
+
+    /* BANNER */
+    .banner{
+        min-height:auto;
+        padding:140px 0 80px;
+    }
+
+    .banner-content h1{
+        font-size:36px;
+        line-height:44px;
+    }
+
+    .banner-content h2{
+        font-size:18px;
+    }
+
+    .banner-content p{
+        font-size:15px;
+    }
+
+    .botoes{
+        flex-direction:column;
+        align-items:center;
+        gap:15px;
+    }
+
+    .btn, .btn-outline{
+        width:100%;
+        max-width:280px;
+        text-align:center;
+    }
+
+    /* SEÇÕES */
+    .sobre,
+    .servicos,
+    .galeria,
+    .videos,
+    .agenda,
+    .depoimentos,
+    .contato{
+        padding:70px 0;
+    }
+
+    .titulo h2{
+        font-size:28px;
+    }
+
+    .titulo p{
+        font-size:15px;
+    }
+
+    /* SOBRE */
+    .sobre-texto h2{
+        font-size:26px;
+    }
+
+    .sobre-texto p{
+        font-size:15px;
+    }
+
+    /* SERVIÇOS */
+    .servicos-grid{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .servico{
+        padding:30px 25px;
+    }
+
+    .servico i{
+        font-size:40px;
+    }
+
+    .servico h3{
+        font-size:20px;
+    }
+
+    /* NÚMEROS */
+    .numeros .container{
+        grid-template-columns:repeat(2,1fr);
+        gap:20px;
+    }
+
+    .numero h2{
+        font-size:32px;
+    }
+
+    /* GALERIA */
+    .galeria-grid{
+        grid-template-columns:1fr;
+        gap:15px;
+    }
+
+    .foto{
+        height:280px;
+    }
+
+    /* VÍDEOS */
+    .videos-grid{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .video iframe{
+        height:220px;
+    }
+
+    /* AGENDA */
+    .evento{
+        flex-direction:column;
+        text-align:center;
+        padding:20px 15px;
+    }
+
+    .data{
+        min-width:70px;
+        height:70px;
+    }
+
+    .data h3{
+        font-size:26px;
+    }
+
+    .descricao h4{
+        font-size:18px;
+    }
+
+    /* DEPOIMENTOS */
+    .cards-depoimentos{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .depoimento{
+        padding:25px 20px;
+    }
+
+    .depoimento i{
+        font-size:32px;
+    }
+
+    .depoimento p{
+        font-size:14px;
+        line-height:26px;
+    }
+
+    /* CONTATO */
+    .contato-grid{
+        gap:30px;
+    }
+
+    .info-contato h3{
+        font-size:22px;
+    }
+
+    .info-contato p{
+        font-size:16px;
+    }
+
+    .formulario{
+        padding:25px 20px;
+    }
+
+    .formulario input,
+    .formulario textarea{
+        padding:14px;
+        font-size:15px;
+    }
+
+    .redes{
+        gap:14px;
+    }
+
+    .redes a{
+        width:48px;
+        height:48px;
+        font-size:18px;
+    }
+
+    /* MAPA */
+    .mapa iframe{
+        height:300px;
+    }
+
+    /* FOOTER */
+    footer{
+        padding-top:50px;
+    }
+
+    footer .container{
+        grid-template-columns:1fr;
+        gap:30px;
+        text-align:center;
+    }
+
+    .footer-logo h2{
+        font-size:24px;
+    }
+
+    .footer-links h3,
+    .footer-contato h3{
+        margin-bottom:18px;
+    }
+
+    .copy{
+        margin-top:40px;
+        padding:20px;
+        font-size:14px;
+    }
+
+    /* WHATSAPP */
+    .whatsapp{
+        width:55px;
+        height:55px;
+        font-size:28px;
+        right:18px;
+        bottom:18px;
+    }
+
+    /* BOTÃO TOPO */
+    .btn-topo{
+        width:48px;
+        height:48px;
+        font-size:18px;
+        right:18px;
+        bottom:85px;
+    }
+
+}
+
+/* ===================================
+   MOBILE PEQUENO (até 480px)
+   =================================== */
+@media (max-width:480px){
+
+    /* HEADER */
+    .logo-img{
+        width:100px;
+    }
+
+    /* BANNER */
+    .banner{
+        padding:120px 0 60px;
+    }
+
+    .banner-content h1{
+        font-size:28px;
+        line-height:36px;
+    }
+
+    .banner-content h2{
+        font-size:16px;
+    }
+
+    .banner-content p{
+        font-size:14px;
+    }
+
+    /* SEÇÕES */
+    .sobre,
+    .servicos,
+    .galeria,
+    .videos,
+    .agenda,
+    .depoimentos,
+    .contato{
+        padding:50px 0;
+    }
+
+    .titulo h2{
+        font-size:24px;
+    }
+
+    .titulo p{
+        font-size:14px;
+    }
+
+    /* SOBRE */
+    .sobre-texto h2{
+        font-size:22px;
+    }
+
+    .sobre-texto p{
+        font-size:14px;
+    }
+
+    /* SERVIÇOS */
+    .servico{
+        padding:25px 20px;
+    }
+
+    .servico i{
+        font-size:34px;
+    }
+
+    .servico h3{
+        font-size:18px;
+    }
+
+    /* NÚMEROS */
+    .numeros .container{
+        grid-template-columns:repeat(2,1fr);
+        gap:15px;
+    }
+
+    .numero h2{
+        font-size:26px;
+    }
+
+    .numero p{
+        font-size:13px;
+    }
+
+    /* GALERIA */
+    .foto{
+        height:220px;
+    }
+
+    /* VÍDEOS */
+    .video iframe{
+        height:180px;
+    }
+
+    /* AGENDA */
+    .evento{
+        padding:15px 12px;
+    }
+
+    .data{
+        min-width:60px;
+        height:60px;
+    }
+
+    .data h3{
+        font-size:22px;
+    }
+
+    .descricao h4{
+        font-size:16px;
+    }
+
+    .descricao p{
+        font-size:13px;
+    }
+
+    /* DEPOIMENTOS */
+    .depoimento{
+        padding:20px 15px;
+    }
+
+    .depoimento i{
+        font-size:28px;
+    }
+
+    .depoimento p{
+        font-size:13px;
+        line-height:24px;
+    }
+
+    .depoimento h4{
+        font-size:17px;
+    }
+
+    /* CONTATO */
+    .info-contato h3{
+        font-size:20px;
+    }
+
+    .info-contato p{
+        font-size:14px;
+        gap:10px;
+    }
+
+    .formulario{
+        padding:20px 15px;
+    }
+
+    .formulario input,
+    .formulario textarea{
+        padding:12px;
+        font-size:14px;
+    }
+
+    .redes a{
+        width:42px;
+        height:42px;
+        font-size:16px;
+    }
+
+    /* MAPA */
+    .mapa iframe{
+        height:220px;
+    }
+
+    /* FOOTER */
+    .footer-logo h2{
+        font-size:20px;
+    }
+
+    .footer-logo p{
+        font-size:14px;
+        line-height:26px;
+    }
+
+    .footer-links a,
+    .footer-contato p{
+        font-size:14px;
+    }
+
+    .copy{
+        font-size:13px;
+        padding:15px;
+    }
+
+    /* WHATSAPP */
+    .whatsapp{
+        width:48px;
+        height:48px;
+        font-size:24px;
+        right:14px;
+        bottom:14px;
+    }
+
+    /* BOTÃO TOPO */
+    .btn-topo{
+        width:42px;
+        height:42px;
+        font-size:16px;
+        right:14px;
+        bottom:72px;
+    }
+
+}
+
+/* ===================================
+   MOBILE MUITO PEQUENO (até 360px)
+   =================================== */
+@media (max-width:360px){
+
+    .banner-content h1{
+        font-size:24px;
+        line-height:30px;
+    }
+
+    .titulo h2{
+        font-size:20px;
+    }
+
+    .numero h2{
+        font-size:22px;
+    }
+
+    .foto{
+        height:180px;
+    }
+
+    .video iframe{
+        height:160px;
+    }
+
+    .whatsapp{
+        width:42px;
+        height:42px;
+        font-size:20px;
+    }
+
+    .btn-topo{
+        width:38px;
+        height:38px;
+        font-size:14px;
+    }
+
+}
