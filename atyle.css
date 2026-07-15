@@ -1,0 +1,1718 @@
+/* ======================================================
+   DJ DIEGO BELGRADO
+   style.css
+   BLOCO 1
+====================================================== */
+
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+/* VARIÁVEIS */
+
+:root{
+
+    --preto:#050505;
+    --preto2:#111111;
+    --preto3:#1c1c1c;
+
+    --branco:#ffffff;
+
+    --cinza:#bdbdbd;
+
+    --azul:#00bfff;
+
+    --roxo:#8a2be2;
+
+    --verde:#25d366;
+
+    --sombra:0 0 20px rgba(0,191,255,.4);
+
+}
+
+/* BODY */
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:var(--preto);
+
+    color:var(--branco);
+
+    overflow-x:hidden;
+
+}
+
+/* LINKS */
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+/* IMAGENS */
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+}
+
+/* CONTAINER */
+
+.container{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+/* ===================================
+HEADER
+=================================== */
+
+header{
+
+    width:100%;
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    z-index:999;
+
+    background:rgba(0,0,0,.75);
+
+    backdrop-filter:blur(10px);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+header .container{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:18px 0;
+
+}
+
+/* ===================================
+LOGO
+=================================== */
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+.logo-img{
+
+    width:170px;
+
+    transition:.4s;
+
+    filter:drop-shadow(0 0 12px var(--azul));
+
+}
+
+.logo-img:hover{
+
+    transform:scale(1.05);
+
+    filter:drop-shadow(0 0 20px var(--roxo));
+
+}
+
+/* ===================================
+MENU
+=================================== */
+
+nav ul{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:35px;
+
+}
+
+nav ul li a{
+
+    color:white;
+
+    font-weight:500;
+
+    transition:.4s;
+
+    position:relative;
+
+}
+
+nav ul li a:hover{
+
+    color:var(--azul);
+
+}
+
+nav ul li a::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--azul);
+
+    left:0;
+
+    bottom:-6px;
+
+    transition:.4s;
+
+}
+
+nav ul li a:hover::after{
+
+    width:100%;
+
+}
+
+/* MENU MOBILE */
+
+.menu-mobile{
+
+    display:none;
+
+    font-size:28px;
+
+    cursor:pointer;
+
+}
+
+/* ===================================
+BANNER
+=================================== */
+
+.banner{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    position:relative;
+
+    background:url("../img/background.jpg") center center;
+
+    background-size:cover;
+
+}
+
+.overlay{
+
+    position:absolute;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(0,0,0,.70);
+
+}
+
+/* GRID */
+
+.banner-grid{
+
+    position:relative;
+
+    z-index:2;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    align-items:center;
+
+    gap:60px;
+
+}
+
+/* TEXTO */
+
+.banner-content h1{
+
+    font-size:72px;
+
+    line-height:80px;
+
+    margin-bottom:20px;
+
+    text-transform:uppercase;
+
+}
+
+.banner-content span{
+
+    color:var(--azul);
+
+    text-shadow:0 0 20px var(--azul);
+
+}
+
+.banner-content h2{
+
+    font-size:28px;
+
+    font-weight:400;
+
+    color:#ececec;
+
+    margin-bottom:20px;
+
+}
+
+.banner-content p{
+
+    font-size:18px;
+
+    color:#bfbfbf;
+
+    line-height:32px;
+
+    margin-bottom:40px;
+
+}
+
+/* BOTÕES */
+
+.botoes{
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.btn{
+
+    background:linear-gradient(45deg,var(--azul),var(--roxo));
+
+    padding:16px 35px;
+
+    border-radius:50px;
+
+    color:white;
+
+    font-weight:600;
+
+    transition:.4s;
+
+    box-shadow:0 0 20px rgba(0,191,255,.5);
+
+}
+
+.btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 0 35px rgba(0,191,255,.8);
+
+}
+
+.btn-outline{
+
+    padding:16px 35px;
+
+    border-radius:50px;
+
+    border:2px solid var(--azul);
+
+    transition:.4s;
+
+}
+
+.btn-outline:hover{
+
+    background:var(--azul);
+
+    color:black;
+
+}
+
+/* FOTO DO DJ */
+
+.banner-image{
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.banner-image img{
+
+    width:430px;
+
+    border-radius:20px;
+
+    border:4px solid rgba(255,255,255,.08);
+
+    box-shadow:
+
+        0 0 25px rgba(0,191,255,.5),
+
+        0 0 50px rgba(138,43,226,.4);
+
+    transition:.5s;
+
+}
+
+.banner-image img:hover{
+
+    transform:scale(1.03);
+
+}
+
+/* ===================================
+NÚMEROS
+=================================== */
+
+.numeros{
+
+    background:#0f0f0f;
+
+    padding:80px 0;
+
+}
+
+.numeros .container{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+.numero{
+
+    background:#181818;
+
+    border-radius:20px;
+
+    padding:40px;
+
+    text-align:center;
+
+    transition:.4s;
+
+}
+
+.numero:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 0 25px rgba(0,191,255,.4);
+
+}
+
+.numero h2{
+
+    color:var(--azul);
+
+    font-size:45px;
+
+    margin-bottom:10px;
+
+}
+
+.numero p{
+
+    color:#d0d0d0;
+
+    letter-spacing:1px;
+
+}
+/* ======================================================
+   STYLE.CSS
+   BLOCO 2
+   SOBRE + SERVIÇOS
+======================================================*/
+
+/* ==========================
+   TÍTULOS DAS SEÇÕES
+==========================*/
+
+.titulo{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+.titulo span{
+
+    color:var(--azul);
+
+    font-size:18px;
+
+    font-weight:600;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+}
+
+.titulo h2{
+
+    font-size:42px;
+
+    margin:15px 0;
+
+    color:#fff;
+
+}
+
+.titulo p{
+
+    color:#bdbdbd;
+
+    max-width:700px;
+
+    margin:auto;
+
+    line-height:30px;
+
+}
+
+/* ==========================
+   SOBRE
+==========================*/
+
+.sobre{
+
+    padding:120px 0;
+
+    background:#090909;
+
+}
+
+.sobre .container{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+.sobre-imagem{
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.sobre-imagem img{
+
+    width:100%;
+
+    max-width:450px;
+
+    border-radius:25px;
+
+    border:4px solid rgba(255,255,255,.08);
+
+    box-shadow:
+    0 0 20px rgba(0,191,255,.35),
+    0 0 40px rgba(138,43,226,.25);
+
+    transition:.5s;
+
+}
+
+.sobre-imagem img:hover{
+
+    transform:scale(1.03);
+
+}
+
+.titulo-secao{
+
+    display:inline-block;
+
+    color:var(--azul);
+
+    font-size:18px;
+
+    font-weight:600;
+
+    margin-bottom:20px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+.sobre-texto h2{
+
+    font-size:44px;
+
+    margin-bottom:25px;
+
+}
+
+.sobre-texto p{
+
+    color:#c8c8c8;
+
+    font-size:17px;
+
+    line-height:32px;
+
+    margin-bottom:20px;
+
+}
+
+/* ==========================
+   HABILIDADES
+==========================*/
+
+.habilidades{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+    margin-top:40px;
+
+}
+
+.habilidade{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    background:#151515;
+
+    padding:18px;
+
+    border-radius:15px;
+
+    transition:.4s;
+
+    border:1px solid transparent;
+
+}
+
+.habilidade:hover{
+
+    border-color:var(--azul);
+
+    transform:translateY(-6px);
+
+    box-shadow:0 0 20px rgba(0,191,255,.30);
+
+}
+
+.habilidade i{
+
+    font-size:28px;
+
+    color:var(--azul);
+
+}
+
+.habilidade span{
+
+    font-weight:500;
+
+}
+
+/* ==========================
+   SERVIÇOS
+==========================*/
+
+.servicos{
+
+    padding:120px 0;
+
+    background:#101010;
+
+}
+
+.cards-servicos{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:30px;
+
+}
+
+.card{
+
+    background:#171717;
+
+    padding:40px 30px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    transition:.5s;
+
+    border:1px solid rgba(255,255,255,.05);
+
+}
+
+.card:hover{
+
+    transform:translateY(-12px);
+
+    border-color:var(--azul);
+
+    box-shadow:
+    0 0 20px rgba(0,191,255,.30),
+    0 0 40px rgba(138,43,226,.20);
+
+}
+
+.card i{
+
+    font-size:55px;
+
+    color:var(--azul);
+
+    margin-bottom:25px;
+
+}
+
+.card h3{
+
+    font-size:24px;
+
+    margin-bottom:20px;
+
+}
+
+.card p{
+
+    color:#bdbdbd;
+
+    line-height:30px;
+
+}
+
+/* ==========================
+   EFEITO DE BRILHO
+==========================*/
+
+.card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:20px;
+
+    opacity:0;
+
+    transition:.5s;
+
+    background:linear-gradient(
+        135deg,
+        rgba(0,191,255,.08),
+        rgba(138,43,226,.08)
+    );
+
+}
+
+.card{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.card:hover::before{
+
+    opacity:1;
+
+}
+
+/* ==========================
+   LINHA DECORATIVA
+==========================*/
+
+.servicos::before{
+
+    content:"";
+
+    display:block;
+
+    width:120px;
+
+    height:4px;
+
+    margin:0 auto 70px;
+
+    background:linear-gradient(
+        90deg,
+        var(--azul),
+        var(--roxo)
+    );
+
+    border-radius:20px;
+
+}
+
+/* ==========================
+   TRANSIÇÕES
+==========================*/
+
+.sobre,
+.servicos,
+.card,
+.habilidade,
+.sobre-imagem img{
+
+    transition:.4s;
+
+}
+/* ======================================================
+   STYLE.CSS
+   BLOCO 3
+   GALERIA • VÍDEOS • AGENDA • DEPOIMENTOS
+======================================================*/
+
+/* ==========================
+   GALERIA
+==========================*/
+
+.galeria{
+
+    padding:120px 0;
+
+    background:#090909;
+
+}
+
+.galeria-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:25px;
+
+}
+
+.foto{
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+    position:relative;
+
+    cursor:pointer;
+
+    border:2px solid rgba(255,255,255,.05);
+
+    transition:.4s;
+
+}
+
+.foto:hover{
+
+    border-color:var(--azul);
+
+    box-shadow:
+    0 0 20px rgba(0,191,255,.35),
+    0 0 45px rgba(138,43,226,.25);
+
+}
+
+.foto img{
+
+    width:100%;
+
+    height:320px;
+
+    object-fit:cover;
+
+    transition:.6s;
+
+}
+
+.foto:hover img{
+
+    transform:scale(1.12);
+
+}
+
+.foto::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        transparent,
+        rgba(0,0,0,.45)
+    );
+
+}
+
+/* ==========================
+   VÍDEOS
+==========================*/
+
+.videos{
+
+    padding:120px 0;
+
+    background:#111111;
+
+}
+
+.videos-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:35px;
+
+}
+
+.video{
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+    border:2px solid rgba(255,255,255,.05);
+
+    transition:.4s;
+
+}
+
+.video:hover{
+
+    border-color:var(--roxo);
+
+    box-shadow:
+    0 0 20px rgba(138,43,226,.35);
+
+}
+
+.video iframe{
+
+    width:100%;
+
+    height:350px;
+
+    border:none;
+
+}
+
+/* ==========================
+   AGENDA
+==========================*/
+
+.agenda{
+
+    padding:120px 0;
+
+    background:#090909;
+
+}
+
+.agenda-lista{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+
+}
+
+.evento{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:30px;
+
+    background:#171717;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    border-left:5px solid var(--azul);
+
+    transition:.4s;
+
+}
+
+.evento:hover{
+
+    transform:translateX(10px);
+
+    box-shadow:
+    0 0 20px rgba(0,191,255,.25);
+
+}
+
+.data{
+
+    min-width:90px;
+
+    height:90px;
+
+    border-radius:15px;
+
+    background:linear-gradient(
+        135deg,
+        var(--azul),
+        var(--roxo)
+    );
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.data h3{
+
+    font-size:34px;
+
+    color:#fff;
+
+}
+
+.data span{
+
+    color:#fff;
+
+    font-weight:600;
+
+    letter-spacing:2px;
+
+}
+
+.descricao h4{
+
+    font-size:24px;
+
+    margin-bottom:8px;
+
+}
+
+.descricao p{
+
+    color:#cfcfcf;
+
+}
+
+/* ==========================
+   DEPOIMENTOS
+==========================*/
+
+.depoimentos{
+
+    padding:120px 0;
+
+    background:#111111;
+
+}
+
+.cards-depoimentos{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:30px;
+
+}
+
+.depoimento{
+
+    background:#181818;
+
+    padding:40px 35px;
+
+    border-radius:20px;
+
+    transition:.4s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.depoimento:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:
+    0 0 25px rgba(138,43,226,.35);
+
+}
+
+.depoimento i{
+
+    font-size:42px;
+
+    color:var(--azul);
+
+    margin-bottom:20px;
+
+}
+
+.depoimento p{
+
+    line-height:32px;
+
+    color:#d0d0d0;
+
+    margin-bottom:25px;
+
+    font-style:italic;
+
+}
+
+.depoimento h4{
+
+    color:var(--branco);
+
+    font-size:20px;
+
+}
+
+.depoimento::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:4px;
+
+    background:linear-gradient(
+        90deg,
+        var(--azul),
+        var(--roxo)
+    );
+
+}
+
+/* ==========================
+   ANIMAÇÕES
+==========================*/
+
+.foto,
+.video,
+.evento,
+.depoimento{
+
+    transition:all .4s ease;
+
+}
+/* ======================================================
+   STYLE.CSS
+   BLOCO 4
+   CONTATO • MAPA • RODAPÉ • WHATSAPP
+======================================================*/
+
+/* ==========================
+   CONTATO
+==========================*/
+
+.contato{
+
+    padding:120px 0;
+
+    background:#080808;
+
+}
+
+.contato-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:60px;
+
+    align-items:start;
+
+}
+
+.info-contato h3{
+
+    font-size:32px;
+
+    margin-bottom:30px;
+
+}
+
+.info-contato p{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-bottom:22px;
+
+    font-size:18px;
+
+    color:#d4d4d4;
+
+}
+
+.info-contato i{
+
+    color:var(--azul);
+
+    font-size:22px;
+
+}
+
+/* REDES SOCIAIS */
+
+.redes{
+
+    display:flex;
+
+    gap:18px;
+
+    margin-top:40px;
+
+}
+
+.redes a{
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    background:#171717;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:22px;
+
+    transition:.4s;
+
+}
+
+.redes a:hover{
+
+    background:linear-gradient(
+        135deg,
+        var(--azul),
+        var(--roxo)
+    );
+
+    transform:translateY(-6px);
+
+    box-shadow:0 0 25px rgba(0,191,255,.45);
+
+}
+
+/* ==========================
+   FORMULÁRIO
+==========================*/
+
+.formulario{
+
+    background:#141414;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    box-shadow:0 0 25px rgba(0,191,255,.10);
+
+}
+
+.formulario form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.formulario input,
+.formulario textarea{
+
+    width:100%;
+
+    background:#202020;
+
+    border:2px solid transparent;
+
+    color:#fff;
+
+    padding:18px;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+.formulario input:focus,
+.formulario textarea:focus{
+
+    border-color:var(--azul);
+
+    box-shadow:0 0 15px rgba(0,191,255,.30);
+
+}
+
+.formulario textarea{
+
+    resize:none;
+
+    min-height:170px;
+
+}
+
+.formulario button{
+
+    border:none;
+
+    cursor:pointer;
+
+}
+
+/* ==========================
+   MAPA
+==========================*/
+
+.mapa iframe{
+
+    width:100%;
+
+    height:450px;
+
+    border:0;
+
+    display:block;
+
+}
+
+/* ==========================
+   RODAPÉ
+==========================*/
+
+footer{
+
+    background:#050505;
+
+    border-top:1px solid rgba(255,255,255,.06);
+
+    padding-top:70px;
+
+}
+
+footer .container{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr 1fr;
+
+    gap:60px;
+
+}
+
+.footer-logo h2{
+
+    font-size:34px;
+
+    margin-bottom:20px;
+
+}
+
+.footer-logo span{
+
+    color:var(--azul);
+
+}
+
+.footer-logo p{
+
+    color:#bdbdbd;
+
+    line-height:30px;
+
+}
+
+.footer-links h3,
+.footer-contato h3{
+
+    margin-bottom:25px;
+
+}
+
+.footer-links ul{
+
+    list-style:none;
+
+}
+
+.footer-links li{
+
+    margin-bottom:15px;
+
+}
+
+.footer-links a{
+
+    color:#cfcfcf;
+
+    transition:.3s;
+
+}
+
+.footer-links a:hover{
+
+    color:var(--azul);
+
+    margin-left:6px;
+
+}
+
+.footer-contato p{
+
+    margin-bottom:15px;
+
+    color:#cfcfcf;
+
+}
+
+.copy{
+
+    margin-top:60px;
+
+    text-align:center;
+
+    padding:25px;
+
+    border-top:1px solid rgba(255,255,255,.06);
+
+    color:#9e9e9e;
+
+}
+
+.copy strong{
+
+    color:var(--azul);
+
+}
+
+/* ==========================
+   BOTÃO WHATSAPP
+==========================*/
+
+.whatsapp{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:50%;
+
+    background:var(--verde);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#fff;
+
+    font-size:34px;
+
+    z-index:999;
+
+    box-shadow:0 0 25px rgba(37,211,102,.45);
+
+    transition:.4s;
+
+}
+
+.whatsapp:hover{
+
+    transform:scale(1.12);
+
+    box-shadow:0 0 35px rgba(37,211,102,.75);
+
+}
+
+/* ==========================
+   SCROLLBAR
+==========================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#0f0f0f;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:linear-gradient(
+        var(--azul),
+        var(--roxo)
+    );
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#00d5ff;
+
+}
+
+/* ==========================
+   SELEÇÃO DE TEXTO
+==========================*/
+
+::selection{
+
+    background:var(--azul);
+
+    color:#000;
+
+}
+
+/* ==========================
+   EFEITOS GERAIS
+==========================*/
+
+section{
+
+    position:relative;
+
+}
+
+section::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:0;
+
+    width:120px;
+
+    height:3px;
+
+    transform:translateX(-50%);
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        var(--azul),
+        transparent
+    );
+
+    opacity:.18;
+
+}
+
+/* ==========================
+   TRANSIÇÕES GLOBAIS
+==========================*/
+
+button,
+a,
+img,
+.card,
+.foto,
+.video,
+.depoimento,
+.evento,
+.numero,
+input,
+textarea{
+
+    transition:all .35s ease;
+
+}
+/* ===================================
+HEADER AO ROLAR
+=================================== */
+
+.header-scroll{
+
+    background:rgba(5,5,5,.95);
+
+    box-shadow:0 8px 30px rgba(0,0,0,.45);
+
+    transition:.3s;
+
+}
+
+/* ===================================
+BOTÃO VOLTAR AO TOPO
+=================================== */
+
+.btn-topo{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:105px;
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:linear-gradient(135deg,#00bfff,#8a2be2);
+
+    color:#fff;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    z-index:998;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transform:translateY(20px);
+
+    transition:.35s;
+
+    box-shadow:0 0 20px rgba(0,191,255,.4);
+
+}
+
+.btn-topo.mostrar{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translateY(0);
+
+}
+
+.btn-topo:hover{
+
+    transform:scale(1.08);
+
+    box-shadow:0 0 30px rgba(0,191,255,.8);
+
+}
