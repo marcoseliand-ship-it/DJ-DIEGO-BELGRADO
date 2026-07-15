@@ -113,7 +113,7 @@ header .container{
 
     justify-content:space-between;
 
-    padding:18px 0;
+    padding:clamp(10px, 1.5vw, 18px) 0;
 
 }
 
@@ -131,8 +131,7 @@ LOGO
 
 .logo-img{
 
-    width:170px;
-
+    width:clamp(50px, 6vw, 80px);
     transition:.4s;
 
     filter:drop-shadow(0 0 12px var(--azul));
@@ -157,7 +156,7 @@ nav ul{
 
     list-style:none;
 
-    gap:35px;
+    gap:clamp(18px, 3vw, 35px);
 
 }
 
@@ -263,7 +262,7 @@ BANNER
 
     align-items:center;
 
-    gap:60px;
+    gap:clamp(30px, 5vw, 60px);
 
 }
 
@@ -271,9 +270,9 @@ BANNER
 
 .banner-content h1{
 
-    font-size:72px;
+    font-size:clamp(2rem, 5vw, 72px);
 
-    line-height:80px;
+    line-height:1.1;
 
     margin-bottom:20px;
 
@@ -291,7 +290,7 @@ BANNER
 
 .banner-content h2{
 
-    font-size:28px;
+    font-size:clamp(1rem, 2.5vw, 28px);
 
     font-weight:400;
 
@@ -303,11 +302,10 @@ BANNER
 
 .banner-content p{
 
-    font-size:18px;
-
+    font-size:clamp(0.875rem, 1.3vw, 18px);
     color:#bfbfbf;
 
-    line-height:32px;
+    line-height:clamp(24px, 2.5vw, 32px);
 
     margin-bottom:40px;
 
@@ -383,7 +381,7 @@ BANNER
 
 .banner-image img{
 
-    width:430px;
+    width:min(430px, 90%);
 
     border-radius:20px;
 
@@ -413,7 +411,7 @@ NÚMEROS
 
     background:#0f0f0f;
 
-    padding:80px 0;
+    padding:clamp(50px, 6vw, 80px) 0;
 
 }
 
@@ -423,7 +421,7 @@ NÚMEROS
 
     grid-template-columns:repeat(4,1fr);
 
-    gap:30px;
+    gap:clamp(15px, 2.5vw, 30px);
 
 }
 
@@ -433,7 +431,7 @@ NÚMEROS
 
     border-radius:20px;
 
-    padding:40px;
+    padding:clamp(25px, 3vw, 40px);
 
     text-align:center;
 
@@ -453,7 +451,7 @@ NÚMEROS
 
     color:var(--azul);
 
-    font-size:45px;
+    font-size:clamp(1.75rem, 3.5vw, 45px);
 
     margin-bottom:10px;
 
@@ -480,7 +478,7 @@ NÚMEROS
 
     text-align:center;
 
-    margin-bottom:70px;
+    margin-bottom:clamp(40px, 5vw, 70px);
 
 }
 
@@ -488,7 +486,7 @@ NÚMEROS
 
     color:var(--azul);
 
-    font-size:18px;
+    font-size:clamp(0.875rem, 1.3vw, 18px);
 
     font-weight:600;
 
@@ -500,7 +498,7 @@ NÚMEROS
 
 .titulo h2{
 
-    font-size:42px;
+    font-size:clamp(1.75rem, 3.5vw, 42px);
 
     margin:15px 0;
 
@@ -516,7 +514,7 @@ NÚMEROS
 
     margin:auto;
 
-    line-height:30px;
+    line-height:clamp(26px, 2.5vw, 30px);
 
 }
 
@@ -526,7 +524,7 @@ NÚMEROS
 
 .sobre{
 
-    padding:120px 0;
+    padding:clamp(50px, 8vw, 120px) 0;
 
     background:#090909;
 
@@ -538,7 +536,7 @@ NÚMEROS
 
     grid-template-columns:1fr 1fr;
 
-    gap:70px;
+    gap:clamp(30px, 5vw, 70px);
 
     align-items:center;
 
@@ -596,7 +594,7 @@ NÚMEROS
 
 .sobre-texto h2{
 
-    font-size:44px;
+    font-size:clamp(1.75rem, 3.5vw, 44px);
 
     margin-bottom:25px;
 
@@ -606,11 +604,9 @@ NÚMEROS
 
     color:#c8c8c8;
 
-    font-size:17px;
+    font-size:clamp(0.875rem, 1.3vw, 17px);
 
-    line-height:32px;
-
-    margin-bottom:20px;
+    line-height:clamp(26px, 2.5vw, 32px);
 
 }
 
@@ -636,7 +632,7 @@ NÚMEROS
 
     align-items:center;
 
-    gap:15px;
+    gap:clamp(20px, 3vw, 35px);
 
     background:#151515;
 
@@ -680,7 +676,7 @@ NÚMEROS
 
 .servicos{
 
-    padding:120px 0;
+    padding:clamp(50px, 8vw, 120px) 0;
 
     background:#101010;
 
@@ -692,7 +688,7 @@ NÚMEROS
 
     grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 
-    gap:30px;
+    gap:clamp(15px, 2.5vw, 30px);
 
 }
 
@@ -700,7 +696,7 @@ NÚMEROS
 
     background:#171717;
 
-    padding:40px 30px;
+    padding:clamp(30px, 3vw, 40px) clamp(20px, 2.5vw, 30px);
 
     border-radius:20px;
 
@@ -726,7 +722,7 @@ NÚMEROS
 
 .card i{
 
-    font-size:55px;
+    font-size:clamp(2rem, 4vw, 55px);
 
     color:var(--azul);
 
@@ -736,7 +732,7 @@ NÚMEROS
 
 .card h3{
 
-    font-size:24px;
+    font-size:clamp(1.25rem, 2.5vw, 24px);
 
     margin-bottom:20px;
 
@@ -841,7 +837,7 @@ NÚMEROS
 
 .galeria{
 
-    padding:120px 0;
+    padding:clamp(50px, 8vw, 120px) 0;
 
     background:#090909;
 
@@ -853,7 +849,7 @@ NÚMEROS
 
     grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 
-    gap:25px;
+    gap:clamp(15px, 2vw, 25px);
 
 }
 
@@ -883,11 +879,12 @@ NÚMEROS
 
 }
 
-.foto img{
+.foto img,
+.foto video{
 
     width:100%;
 
-    height:320px;
+    height:clamp(220px, 25vw, 320px);
 
     object-fit:cover;
 
@@ -895,7 +892,8 @@ NÚMEROS
 
 }
 
-.foto:hover img{
+.foto:hover img,
+.foto:hover video{
 
     transform:scale(1.12);
 
@@ -922,9 +920,9 @@ NÚMEROS
 
 .videos{
 
-    padding:120px 0;
+    padding:clamp(50px, 8vw, 120px) 0;
 
-    background:#111111;
+    background:#101010;
 
 }
 
@@ -934,7 +932,7 @@ NÚMEROS
 
     grid-template-columns:repeat(2,1fr);
 
-    gap:35px;
+    gap:clamp(20px, 3vw, 35px);
 
 }
 
@@ -963,7 +961,7 @@ NÚMEROS
 
     width:100%;
 
-    height:350px;
+    height:clamp(180px, 22vw, 350px);
 
     border:none;
 
@@ -975,7 +973,7 @@ NÚMEROS
 
 .agenda{
 
-    padding:120px 0;
+    padding:clamp(50px, 8vw, 120px) 0;
 
     background:#090909;
 
@@ -987,7 +985,7 @@ NÚMEROS
 
     flex-direction:column;
 
-    gap:25px;
+    gap:clamp(15px, 2vw, 25px);
 
 }
 
@@ -1001,7 +999,7 @@ NÚMEROS
 
     background:#171717;
 
-    padding:25px;
+    padding:clamp(18px, 2vw, 25px);
 
     border-radius:18px;
 
@@ -1022,9 +1020,8 @@ NÚMEROS
 
 .data{
 
-    min-width:90px;
-
-    height:90px;
+    min-width:clamp(60px, 7vw, 90px);
+    height:clamp(60px, 7vw, 90px);
 
     border-radius:15px;
 
@@ -1046,7 +1043,7 @@ NÚMEROS
 
 .data h3{
 
-    font-size:34px;
+    font-size:clamp(1.25rem, 2.5vw, 34px);
 
     color:#fff;
 
@@ -1082,7 +1079,7 @@ NÚMEROS
 
 .depoimentos{
 
-    padding:120px 0;
+    padding:clamp(50px, 8vw, 120px) 0;
 
     background:#111111;
 
@@ -1102,7 +1099,7 @@ NÚMEROS
 
     background:#181818;
 
-    padding:40px 35px;
+    padding:clamp(25px, 3vw, 40px) clamp(20px, 2.5vw, 35px);
 
     border-radius:20px;
 
@@ -1125,7 +1122,7 @@ NÚMEROS
 
 .depoimento i{
 
-    font-size:42px;
+    font-size:clamp(1.75rem, 3.5vw, 42px);
 
     color:var(--azul);
 
@@ -1135,9 +1132,9 @@ NÚMEROS
 
 .depoimento p{
 
-    line-height:32px;
+    line-height:clamp(24px, 2.5vw, 32px);
 
-    color:#d0d0d0;
+    color:#d0d0d0
 
     margin-bottom:25px;
 
@@ -1199,7 +1196,7 @@ NÚMEROS
 
 .contato{
 
-    padding:120px 0;
+    padding:clamp(50px, 8vw, 120px) 0;
 
     background:#080808;
 
@@ -1211,7 +1208,7 @@ NÚMEROS
 
     grid-template-columns:1fr 1fr;
 
-    gap:60px;
+    gap:clamp(30px, 5vw, 60px);
 
     align-items:start;
 
@@ -1219,7 +1216,7 @@ NÚMEROS
 
 .info-contato h3{
 
-    font-size:32px;
+    font-size:clamp(1.25rem, 2.5vw, 32px);
 
     margin-bottom:30px;
 
@@ -1263,12 +1260,11 @@ NÚMEROS
 
 .redes a{
 
-    width:55px;
+    width:clamp(42px, 4vw, 55px);
 
-    height:55px;
+    height:clamp(42px, 4vw, 55px);
 
     border-radius:50%;
-
     background:#171717;
 
     display:flex;
@@ -1379,7 +1375,7 @@ NÚMEROS
 
     width:100%;
 
-    height:450px;
+    height:clamp(180px, 22vw, 350px);
 
     border:0;
 
@@ -1397,7 +1393,7 @@ footer{
 
     border-top:1px solid rgba(255,255,255,.06);
 
-    padding-top:70px;
+    padding-top:clamp(40px, 5vw, 70px);
 
 }
 
@@ -1407,13 +1403,13 @@ footer .container{
 
     grid-template-columns:2fr 1fr 1fr;
 
-    gap:60px;
+    gap:clamp(30px, 5vw, 60px);
 
 }
 
 .footer-logo h2{
 
-    font-size:34px;
+    font-size:clamp(1.25rem, 2.5vw, 34px);
 
     margin-bottom:20px;
 
@@ -1478,7 +1474,7 @@ footer .container{
 
 .copy{
 
-    margin-top:60px;
+    margin-top:clamp(30px, 4vw, 60px);
 
     text-align:center;
 
@@ -1508,9 +1504,9 @@ footer .container{
 
     bottom:25px;
 
-    width:65px;
+    width:clamp(48px, 5vw, 65px);
 
-    height:65px;
+    height:clamp(48px, 5vw, 65px);
 
     border-radius:50%;
 
@@ -1524,7 +1520,7 @@ footer .container{
 
     color:#fff;
 
-    font-size:34px;
+    font-size:clamp(24px, 2.5vw, 34px);
 
     z-index:999;
 
@@ -1669,9 +1665,9 @@ BOTÃO VOLTAR AO TOPO
 
     bottom:105px;
 
-    width:55px;
+    width:clamp(42px, 4vw, 55px);
 
-    height:55px;
+    height:clamp(42px, 4vw, 55px);
 
     border:none;
 
@@ -1681,7 +1677,7 @@ BOTÃO VOLTAR AO TOPO
 
     color:#fff;
 
-    font-size:20px;
+    font-size:clamp(16px, 1.5vw, 20px);
 
     cursor:pointer;
 
@@ -1715,4 +1711,5 @@ BOTÃO VOLTAR AO TOPO
 
     box-shadow:0 0 30px rgba(0,191,255,.8);
 
+}
 }
